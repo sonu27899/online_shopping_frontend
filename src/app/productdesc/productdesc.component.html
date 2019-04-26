@@ -1,0 +1,62 @@
+<section id="description">
+  <div class="container">
+          <div class="thumbnail">
+                  <img src="{{'http://localhost:3000'+ Image}}" alt="..."  height="500px" width="500px">
+         </div>
+      <div class="col-md-5">
+          <h1>{{Product_Name}}</h1>
+          <table class="table">
+              <tbody>
+                  <tr>
+                      <td>
+                          <span>Mfg</span>
+                      </td>
+                      <td>{{Mfg}}</td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <span>Qty</span>
+                      </td>
+                      <td>{{Qty}} Units </td>
+                  </tr>
+
+                  <tr>
+                      <td>
+                          <span>Color</span>
+                      </td>
+                      <td>{{Color}}</td>
+                  </tr>
+                  <tr>
+                          <td>
+                              <span>Price</span>
+                          </td>
+                          <td>{{Price}}</td>
+                      </tr>
+              </tbody>
+          </table>
+
+      <hr>
+  </div>
+  <div style="margin-left: 500px;margin-top: 100px;">
+  <h4>About this Product</h4>
+  <p>{{Desc}}
+      </div>
+      <br>
+      <a class="btn btn-primary"  role="button" (click)="onAdd(Product_Id)">BUY</a>
+  </div>
+
+</section>
+<h4>Similar Product</h4>
+<br>
+<div *ngFor="let item of pro_arr" class="col-sm-6 col-md-4" >
+  <button type="button" class="list-group-item" (click)="onlclickpro(item.Product_Id)">
+  <div class="thumbnail">
+    <img src="{{'http://localhost:3000'+ item.Image}}" alt="..." height="300px" width="200px">
+    <div class="caption">
+
+      <h4>{{item.Product_Name}}</h4>
+
+    </div>
+  </div>
+</button>
+</div>

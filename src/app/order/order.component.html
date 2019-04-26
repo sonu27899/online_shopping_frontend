@@ -1,0 +1,38 @@
+<div class="container">
+  <b style="font-size: 50px; color: royalblue;">Order Details</b>
+<hr>
+<div  class="container">
+
+  <div class="form-group">
+   <h4>Id:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="Customer_Id">
+  </div>
+  <div *ngFor="let item1 of customer">
+  <div class="form-group">
+      <h4>Name:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="item1.Name">
+  </div>
+  </div>
+  <div class="form-group">
+    <h4>P_name:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="Product_Name">
+</div>
+<div class="form-group">
+  <h4>Price:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="Price">
+</div>
+
+<div *ngFor="let item1 of customer">
+<div class="form-group">
+  <h4>Address</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="item1.Address">
+</div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+          <button class="btn btn-lg btn-primary form-control" (click)="Placeorder()" >Order Now</button>
+  </div>
+  <div class="col-md-6">
+    <button class="btn btn-lg btn-primary form-control" (click)="can()" >Cancel</button>
+</div>
+
+  </div>
+
+
+</div>
+</div>
